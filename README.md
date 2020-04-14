@@ -4,8 +4,8 @@
 ### Proposed Approach: 
 
 Lateral flow immunoassay tests appear like a manageable, affordable and easily deployable measure to allow at-home testing. Two main potential issues remain to consider:
-
     * *Interpretation of the results:* the results of the tests are less easily interpretable than similar tests (pregnancy, etc). It might as well be difficult sometimes to an untrained eye to distinguish between false positives and negatives (weak concentration marks, time since the test was done, etc). It thus seems necessary to couple the provision of test kits with a web app allowing the users to use a picture of the output of the test to get a more confident diagnostic.
+    
     * *Accuracy of the test result:* Another issue comes from the sensitivity/specificity associated to the test.
 
 
