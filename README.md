@@ -23,7 +23,7 @@ Our dataset would consist in two types of variables, allowing the flexible integ
    - Symptoms exhibited (quantifying fever, cough, runny noise, etc)
    - Size of household + nb of members infected
    - level of individual lockdown (in the past 5 days, how many times have you or a member of your household been grocery shopping)
-   - {\bf Photo of the outcome of the test:} we intend to use a deep-learning architecture ({\bf ResNet-50}) to process the images and convert these images into feature vectors. Training a DL architecture to perform the classification task, we can use the last layer of the network as an "image-feature" vector that we can then input in any classical, potentially more itnerpretable statistical algorithm -- as summarized by the following workflow:
+   - __Photo of the outcome of the test:__ we intend to use a deep-learning architecture ({\bf ResNet-50}) to process the images and convert these images into feature vectors. Training a DL architecture to perform the classification task, we can use the last layer of the network as an "image-feature" vector that we can then input in any classical, potentially more itnerpretable statistical algorithm -- as summarized by the following workflow:
      1. Using pre-trained (on imagenet) ResNet50 layers, polish the training on immuno assay tests (simple classification task)
      2. As users progressively input their images and the dataset keeps growing, progressively finetune the algorithm so as to get more salient feature vectors.
 
