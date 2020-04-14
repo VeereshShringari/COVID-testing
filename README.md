@@ -4,9 +4,10 @@
 ### Proposed Approach: 
 
 Lateral flow immunoassay tests appear like a manageable, affordable and easily deployable measure to allow at-home testing. Two main potential issues remain to consider:
-    * *Interpretation of the results:* the results of the tests are less easily interpretable than similar tests (pregnancy, etc). It might as well be difficult sometimes to an untrained eye to distinguish between false positives and negatives (weak concentration marks, time since the test was done, etc). It thus seems necessary to couple the provision of test kits with a web app allowing the users to use a picture of the output of the test to get a more confident diagnostic.
     
-    * *Accuracy of the test result:* Another issue comes from the sensitivity/specificity associated to the test.
+    - *Interpretation of the results:* the results of the tests are less easily interpretable than similar tests (pregnancy, etc). It might as well be difficult sometimes to an untrained eye to distinguish between false positives and negatives (weak concentration marks, time since the test was done, etc). It thus seems necessary to couple the provision of test kits with a web app allowing the users to use a picture of the output of the test to get a more confident diagnostic.
+    
+    - *Accuracy of the test result:* Another issue comes from the sensitivity/specificity associated to the test.
 
 
 ### Goal
@@ -19,7 +20,7 @@ This model has the advantage of being interpretable and naturally providing unce
 
 Our dataset would consist in two types of variables, allowing the flexible integration of user-specific and county-specific information to infer the diagnostic and confidence intervals:
 
-        + __Subject-specific variables__, based on the app questionnaire and photo of the test, assessing each individual's own level of risk:
+        - __Subject-specific variables__, based on the app questionnaire and photo of the test, assessing each individual's own level of risk:
             - Symptoms exhibited (quantifying fever, cough, runny noise, etc)
             - Size of household + nb of members infected
             - level of individual lockdown (in the past 5 days, how many times have you or a member of your household been grocery shopping)
@@ -27,7 +28,7 @@ Our dataset would consist in two types of variables, allowing the flexible integ
                 1. Using pre-trained (on imagenet) ResNet50 layers, polish the training on immuno assay tests (simple classification task)
                 2. As users progressively input their images and the dataset keeps growing, progressively finetune the algorithm so as to get more salient feature vectors.
 
-        + __County-Specific variables__, which will be useful to update our prior on the individual being infected by the disease (as opposed to the flu or other COVIDs):
+        - __County-Specific variables__, which will be useful to update our prior on the individual being infected by the disease (as opposed to the flu or other COVIDs):
             - Level of the epidemic in the county (nb of infected cases, tested)
             - if possible, level of social distancing (e.g, through SafeGraph's social distancing metric)
 
